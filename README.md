@@ -1,37 +1,20 @@
-Contracts & Attendance Monitoring Dashboard
+# Contracts with Attendance Monitoring
 
-This project provides an interactive dashboard for managing and visualizing contracts and attendance data. It allows users to upload CSV files containing contract details and attendance records and automatically generates insights and charts.
+This project processes **contracts and attendance data** to generate a combined Excel report with KPIs and attendance alerts.
 
-Features:
+## Features
 
-Upload contracts and attendance CSV files directly via a web interface.
+- Merge contracts with attendance records.
+- Flag empty attendance records.
+- Detect 7 continuous days of no attendance.
+- Detect attendance errors: over 5 days/week or weekend attendance.
+- KPI comparison between original and processed data.
+- Outputs multiple sheets: `Contracts Data`, `KPIs_Comparison`, `Empty_Attendance`, `NoAttendance_7Days`.
 
-View and filter contracts and attendance data in tables.
+## How to Run
 
-Visualize contract status distributions (e.g., active, cancelled).
+1. Place input Excel files in `InputFiles/`.
+2. Install dependencies:
 
-Track attendance per person with bar charts showing average attendance.
-
-Quick setup using Python and Streamlit—no heavy installation required.
-
-Ready to showcase for professional portfolios or GitHub.
-
-Tech Stack:
-
-Python
-
-Streamlit (interactive dashboard)
-
-Pandas (data manipulation)
-
-Plotly (visualizations)
-
-How to Run:
-
-Clone the repository.
-
-Install dependencies using pip install -r requirements.txt.
-
-Run the dashboard with streamlit run dashboard.py.
-
-Upload your contracts.csv and attendance.csv files in the sidebar to start visualizing.
+```bash
+pip install -r requirements.txt
